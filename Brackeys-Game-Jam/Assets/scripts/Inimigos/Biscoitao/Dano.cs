@@ -2,28 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Dano : MonoBehaviour
 {
-    
-    public Playervida Playervida;
     public int dano = 2;
+    private Playervida playervida;
 
     void Start()
     {
-        
-    }
+        // Procura pelo Player usando a tag
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-  
-    void Update()
-    {
-        
+        if (player != null)
+        {
+            playervida = player.GetComponent<Playervida>();
+        }
+        else
+        {
+            Debug.LogError("Nenhum objeto com tag 'Player' encontrado na cena!");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player") && playervida != null)
         {
-            Playervida.TomarDano(dano);
+            playervida.TomarDano(dano);
         }
     }
 }
