@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ItemIgnorado
+  - Osso
+  - bola
+  - Biscoito
   layers:
   - Default
   - TransparentFX
