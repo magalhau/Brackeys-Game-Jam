@@ -35,7 +35,7 @@ public class Walking_enemy : MonoBehaviour
 
         if (iscolliding)
         {
-           transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+           transform.localScale = new Vector2(transform.localScale.x * 1, transform.localScale.y);
            speed *= -1;
         }
     }
