@@ -39,7 +39,7 @@ public class Player_Mov : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             Animator.SetTrigger("saltando");    
         }
-        Animator.SetFloat("verticalVel", rb.velocity.y);
+       
 
         grounded = Physics2D.OverlapCircle(pedoperso.position, 0.1f, groundLayer);
 
