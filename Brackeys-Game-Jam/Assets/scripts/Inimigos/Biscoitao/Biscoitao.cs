@@ -14,7 +14,7 @@ public class Biscoitao : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Se o objeto tem a tag que você quer ignorar
-        if (collision.gameObject.CompareTag("ItemIgnorado"))
+        if (collision.gameObject.CompareTag("ItemIgnorado") || collision.gameObject.CompareTag("Goomba"))
         {
             // Pega o colisor do inimigo e do item
             Collider2D colisorInimigo = GetComponent<Collider2D>();
