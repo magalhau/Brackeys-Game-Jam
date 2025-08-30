@@ -22,7 +22,7 @@ public class FinalDeFase : MonoBehaviour
             {
                 Debug.Log("Trigger Final ativado. Esperando o Biscoitão...");
                 triggerAtivado = false;
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("win");
             }
             else
             {
